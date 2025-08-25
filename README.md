@@ -15,8 +15,11 @@ HTML5 – structure and layout
 CSS3 – styling, buttons, and responsive design
 JavaScript (ES6) – game logic, DOM manipulation, and localStorage handling
 
+git clone https://github.com/tyang019/rock-paper-scissors-game.git
+
 📸 Demo Preview
 Three circular buttons for Rock, Paper, and Scissors.
 Results section showing "You WIN/LOSE/Tie" and images of both moves.
 Score tracker with Wins, Losses, Ties counter.
 Reset button to clear history.
+
