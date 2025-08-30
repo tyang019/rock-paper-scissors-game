@@ -40,12 +40,12 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
               result = 'You LOSE';
             }
             
-        } else if(playerMove === 'rock'){
-          if(computerMove === 'rock'){
+        } else if(playerMove === 'ROCK'){
+          if(computerMove === 'ROCK'){
             result = 'Tie';
-          }else if(computerMove === 'paper'){
+          }else if(computerMove === 'PAPER'){
             result = 'You LOSE';
-          }else if(computerMove === 'scissor'){
+          }else if(computerMove === 'SCISSOR'){
             result = 'You WIN';
           }
         }
@@ -67,9 +67,9 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
           .innerHTML = result;
 
         document.querySelector('.js-moves').innerHTML 
-        = `You are the  
+        = `You are  
         <img src="images/${playerMove}.jpg" class="move-icon">
-        <img src="images/${computerMove}.jpg" class="move-icon"> is the
+        <img src="images/${computerMove}.jpg" class="move-icon"> is
         Computer`;
       }
 
@@ -84,9 +84,9 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
         let computerMove = ''; 
 
         if(randomNumber >= 0 && randomNumber < 1/3){
-          computerMove = 'rock';
+          computerMove = 'ROCK';
         }else if(randomNumber >= 1/3 && randomNumber < 2/3){
-          computerMove = 'paper';
+          computerMove = 'PAPER';
         }else if(randomNumber
           >= 2/3 && randomNumber < 1){
           computerMove ='SCISSOR';
