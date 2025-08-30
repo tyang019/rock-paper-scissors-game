@@ -26,5 +26,6 @@ Results section showing "You WIN/LOSE/Tie" and images of both moves.
 Score tracker with Wins, Losses, Ties counter.
 Reset button to clear history.
 
+https://tyang019.github.io/rock-paper-scissors-game/ 
 
 
