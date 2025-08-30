@@ -22,30 +22,30 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
       function playGame(playerMove){
         const computerMove = pickComputerMove();
 
-        if(playerMove === 'SCISSOR'){
-           if(computerMove === 'ROCK'){
+        if(playerMove === 'scissor'){
+           if(computerMove === 'rock'){
             result = 'You LOSE';
-          }else if(computerMove === 'PAPER'){
+          }else if(computerMove === 'paper'){
             result = 'You WIN';
-          }else if(computerMove === 'SCISSOR'){
+          }else if(computerMove === 'scissor'){
             result = 'Tie';
           }
 
-        }else if(playerMove === 'PAPER'){
-           if(computerMove === 'ROCK'){
+        }else if(playerMove === 'paper'){
+           if(computerMove === 'rock'){
             result = 'You WIN';
-            }else if(computerMove === 'PAPER'){
+            }else if(computerMove === 'paper'){
               result = 'Tie';
-            }else if(computerMove === 'SCISSOR'){
+            }else if(computerMove === 'scissor'){
               result = 'You LOSE';
             }
             
-        } else if(playerMove === 'ROCK'){
-          if(computerMove === 'ROCK'){
+        } else if(playerMove === 'rock'){
+          if(computerMove === 'rock'){
             result = 'Tie';
-          }else if(computerMove === 'PAPER'){
+          }else if(computerMove === 'paper'){
             result = 'You LOSE';
-          }else if(computerMove === 'SCISSOR'){
+          }else if(computerMove === 'scissor'){
             result = 'You WIN';
           }
         }
@@ -67,9 +67,9 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
           .innerHTML = result;
 
         document.querySelector('.js-moves').innerHTML 
-        = `You are  
+        = `You are the  
         <img src="images/${playerMove}.jpg" class="move-icon">
-        <img src="images/${computerMove}.jpg" class="move-icon"> is
+        <img src="images/${computerMove}.jpg" class="move-icon"> is the
         Computer`;
       }
 
@@ -84,12 +84,12 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
         let computerMove = ''; 
 
         if(randomNumber >= 0 && randomNumber < 1/3){
-          computerMove = 'ROCK';
+          computerMove = 'rock';
         }else if(randomNumber >= 1/3 && randomNumber < 2/3){
-          computerMove = 'PAPER';
+          computerMove = 'paper';
         }else if(randomNumber
           >= 2/3 && randomNumber < 1){
-          computerMove ='SCISSOR';
+          computerMove ='scissor';
         }
         return computerMove;
       }
