@@ -40,12 +40,12 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
               result = 'You LOSE';
             }
             
-        } else if(playerMove === 'ROCK'){
-          if(computerMove === 'ROCK'){
+        } else if(playerMove === 'rock'){
+          if(computerMove === 'rock'){
             result = 'Tie';
-          }else if(computerMove === 'PAPER'){
+          }else if(computerMove === 'paper'){
             result = 'You LOSE';
-          }else if(computerMove === 'SCISSOR'){
+          }else if(computerMove === 'scissor'){
             result = 'You WIN';
           }
         }
@@ -84,12 +84,12 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
         let computerMove = ''; 
 
         if(randomNumber >= 0 && randomNumber < 1/3){
-          computerMove = 'ROCK';
+          computerMove = 'rock';
         }else if(randomNumber >= 1/3 && randomNumber < 2/3){
-          computerMove = 'PAPER';
+          computerMove = 'paper';
         }else if(randomNumber
           >= 2/3 && randomNumber < 1){
-          computerMove ='SCISSOR';
+          computerMove ='scissor';
         }
         return computerMove;
       }
