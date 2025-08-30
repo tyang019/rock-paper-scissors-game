@@ -11,7 +11,6 @@ body{
         width: 50px;
         height: 70px;
         border-radius: 50%;
-        display:block;
       }
       .move-button{
         background-color: transparent;

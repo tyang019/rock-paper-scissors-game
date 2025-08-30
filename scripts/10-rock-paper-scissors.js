@@ -89,7 +89,7 @@ let score = JSON.parse(localStorage.getItem('score')) ||  {
           computerMove = 'paper';
         }else if(randomNumber
           >= 2/3 && randomNumber < 1){
-          computerMove ='scissor';
+          computerMove ='SCISSOR';
         }
         return computerMove;
       }
